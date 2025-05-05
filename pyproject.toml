@@ -1,0 +1,29 @@
+# How to build your package
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+# Information about the package
+[project]
+name = "forecast"
+description = "Wind power forecasting using machine learning"
+version = "0.1.0"
+authors = [
+    { name = "Muhammad Owais Latif", email = "s250184@dtu.dk" },
+    { name = "Dimitrios Tselios", email = "s243544@dtu.dk" },
+    { name = "Miguel Matos", email = "s240178@dtu.dk" }
+]
+
+dependencies = [
+    "numpy",
+    "pandas",
+    "scikit-learn",
+    "matplotlib",
+]
+
+[project.urls]
+Repository = "https://github.com/DTUWindEducation/final-project-push-pray-1.git"
+
+# Add this block to fix the installation!
+[tool.hatch.build.targets.wheel]
+packages = ["src/forecast"]
